@@ -1,0 +1,16 @@
+{
+  "name": "cuanto-me-queda",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n CLIENTE,SERVIDOR -c cyan,green \"npm run dev --prefix client\" \"node server/index.js\"",
+    "start": "node server/index.js",
+    "build": "npm run build --prefix client",
+    "setup": "npm install && npm install --prefix client"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "express": "^4.19.2"
+  }
+}
